@@ -344,6 +344,10 @@ main > .flex > .right-contents > ul > li > a{
     main > .flex > .right-contents {
         display: none;
     }
+    /* breadcrumb-area */
+    .breadcrumb-area {
+        padding: 25px 0;
+    }
     /* faq-area */
     .faq-area {
         padding: 50px 0;

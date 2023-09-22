@@ -657,6 +657,10 @@ main > .flex > .right-contents > ul > li > a{
     main > .flex > .right-contents {
         display: none;
     }
+    /* breadcrumb-area */
+    .breadcrumb-area {
+        padding: 25px 0;
+    }
     /* service-area */
     .service-area {
         padding: 50px 0;
@@ -884,6 +888,7 @@ main > .flex > .right-contents > ul > li > a{
         left: 50%;
         top: 130%;
     }
+    /* example-area */
     .example-area > .container > h2 {
         font-size: 38px;
     }
@@ -899,6 +904,13 @@ main > .flex > .right-contents > ul > li > a{
     .example-area > .container > .contents > .flex > div:first-child > p {
         font-size: 14px;
         margin-top: 25px;
+    }
+    /* faq-area  */
+    .faq-area > .container > h2 {
+        font-size: 38px;
+    }
+    .faq-area > .container > h2 > span {
+        font-size: 14px;
     }
     .accordion-title:before {
         right: 5px;

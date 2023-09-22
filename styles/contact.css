@@ -180,6 +180,7 @@
     background-size: cover;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overflow-x: hidden;
 }
 /* Chrome, Safari用 */
 .form-area > .container > form > .container > .rows > .privacy::-webkit-scrollbar {
@@ -257,6 +258,10 @@
     opacity: .8;
 }
 @media screen and (max-width:768px) {
+    /* breadcrumb-area */
+    .breadcrumb-area {
+        padding: 25px 0;
+    }
     /* contact-area  */
     .contact-area {
         padding: 50px 0;

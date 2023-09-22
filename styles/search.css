@@ -589,7 +589,10 @@
 
 }
 @media screen and (max-width: 768px){
-    
+    /* breadcrumb-area */
+    .breadcrumb-area {
+        padding: 25px 0;
+    }
     /* fixed-area */
     .fixed-area{
         display: none;
