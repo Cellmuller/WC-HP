@@ -871,7 +871,7 @@ main > .flex > .right-contents > ul > li > a{
         content: "";
         top: 130%;
         border-left: 2px dashed lightgray;
-        height: 198px;
+        height: 225px;
     }
     .step-area > .container > .contents > .flex:nth-child(2) > div:first-child::before {
         height: 85px;
@@ -884,7 +884,7 @@ main > .flex > .right-contents > ul > li > a{
         top: 130%;
     }
     .step-area > .container > .contents > .flex:nth-child(4) > div:first-child::before {
-        height: 113px;
+        height: 140px;
         left: 50%;
         top: 130%;
     }
