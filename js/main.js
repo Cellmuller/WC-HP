@@ -69,6 +69,11 @@ $(document).ready(function () {
   });
 });
 
+$(".modal a").on("click", function () {
+  $(this).closest(".modal").fadeOut();
+});
+
+// changeImages
 $(document).ready(function () {
   var hoverImages = {
     hokkaido: "./images/top/region-b-img.png",
