@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Search</title>
+    <link rel="stylesheet" href="../styles/parts/header.css">
+    <link rel="stylesheet" href="../styles/parts/footer.css">
+    <link rel="stylesheet" href="../styles/search.css">
+    <!-- googlefont -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
+    <!-- Jquery/Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div>
+            <a href="/"><img src="../images/top/logo.png" alt="logo"></a>
+        </div>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu">
+            <div id="close-menu" class="close-icon">×</div>
+            <img src="../images/top/logo-w.png" alt="logo" id="sp-logo">
+            <ul>
+                <li>
+                    <a href="../about/">About<span>ワンダーコードとは</span></a>
+                </li>
+                <li>
+                    <a href="../curriculum/">Curriculum<span>カリキュラム</span></a>
+                </li>
+                <li>
+                    <a href="#">Search<span>教室検索</span></a>
+                </li>
+                <li>
+                    <a href="../corporate/">Corporate<span>会社概要</span></a>
+                </li>
+                <li>
+                    <a href="#">Column<span>コラム</span></a>
+                </li>
+                <li>
+                    <a href="../franchise/">Franchise<span>フランチャイズ</span></a>
+                    </li>
+                <li>
+                    <a href="../contact/">Contact<span>お問い合わせ</span></a>
+                </li>
+                <li>
+                    <a href="../faq/">FAQ<span>よくあるご質問</span></a>
+                </li>
+                <li>
+                    <a href="../privacypolicy/">Privacy Policy<span>プライバシーポリシー</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb-area">
+            <div class="container">
+                <ul>
+                    <li><a href="/">TOP</a></li>
+                    <li><a href="#" class="current-page">Search</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- search-area -->
+        <section class="search-area">
+            <div class="container">
+                <div class="text-wrapper">
+                    <h2>
+                        <span>教室検索</span>
+                        Search
+                    </h2>
+                    <p>
+                        地図上のお住いのエリアをクリックすると、各都道府県の開講教室一覧ページが開きます。
+                    </p>
+                </div>
+                <div class="container">
+                    <div id="hokkaido" class="region">
+                        <div>
+                            <img src="../images/top/region-img.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="tohoku" class="region">
+                        <div>
+                            <img src="../images/top/region-img-2.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="kanto" class="region">
+                        <div>
+                            <img src="../images/top/region-img-3.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="tokai" class="region">
+                        <div>
+                            <img src="../images/top/region-img-4.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="kinki" class="region">
+                        <div>
+                            <img src="../images/top/region-img-5.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="tyugoku" class="region">
+                        <div>
+                            <img src="../images/top/region-img-6.png" alt="region-img">
+                        </div>
+                    </div>
+                    <div id="kyusyu" class="region">
+                        <div>
+                            <img src="../images/top/region-img-7.png" alt="region-img">
+                        </div>
+                    </div>
+                    
+                    <!-- modaltrigger/sp -->
+                    <div class="sp-trigger">
+                        <ul>
+                            <li id="hokkaido-sp" class="region-sp">北海道</li>
+                            <li id="tohoku-sp" class="region-sp">東北</li>
+                            <li id="kanto-sp" class="region-sp">関東</li>
+                            <li id="kinki-sp" class="region-sp">近畿</li>
+                            <li id="tokai-sp" class="region-sp">東海・甲信越・北陸</li>
+                            <li id="tyugoku-sp" class="region-sp">中国・四国</li>
+                            <li id="kyusyu-sp" class="region-sp">九州・沖縄</li>
+                        </ul>
+                    </div>
+
+                    <!-- 北海道モーダル -->
+                    <div class="modal" id="modal-hokkaido">
+                        <ul>
+                            <li><a href="#">北海道</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 東北モーダル -->
+                    <div class="modal" id="modal-tohoku">
+                        <ul>
+                            <li><a href="#">青森</a></li>
+                            <li><a href="#">岩手</a></li>
+                            <li><a href="#">宮城</a></li>
+                            <li><a href="#">秋田</a></li>
+                            <li><a href="#">山形</a></li>
+                            <li><a href="#">福島</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 関東モーダル -->
+                    <div class="modal" id="modal-kanto">
+                        <ul>
+                            <li><a href="#">東京</a></li>
+                            <li><a href="#">神奈川</a></li>
+                            <li><a href="#">千葉</a></li>
+                            <li><a href="#">埼玉</a></li>
+                            <li><a href="#">茨城</a></li>
+                            <li><a href="#">栃木</a></li>
+                            <li><a href="#">群馬</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 東海・甲信越・北陸モーダル -->
+                    <div class="modal" id="modal-tokai">
+                        <ul>
+                            <li><a href="#">愛知</a></li>
+                            <li><a href="#">岐阜</a></li>
+                            <li><a href="#">静岡</a></li>
+                            <li><a href="#">三重</a></li>
+                            <li><a href="#">新潟</a></li>
+                            <li><a href="#">長野</a></li>
+                            <li><a href="#">富山</a></li>
+                            <li><a href="#">石川</a></li>
+                            <li><a href="#">福井</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 近畿モーダル -->
+                    <div class="modal" id="modal-kinki">
+                        <ul>
+                            <li><a href="#">大阪</a></li>
+                            <li><a href="#">兵庫</a></li>
+                            <li><a href="#">京都</a></li>
+                            <li><a href="#">滋賀</a></li>
+                            <li><a href="#">奈良</a></li>
+                            <li><a href="#">和歌山</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 中国・四国モーダル -->
+                    <div class="modal" id="modal-tyugoku">
+                        <ul>
+                            <li><a href="#">広島</a></li>
+                            <li><a href="#">岡山</a></li>
+                            <li><a href="#">鳥取</a></li>
+                            <li><a href="#">島根</a></li>
+                            <li><a href="#">山口</a></li>
+                            <li><a href="#">徳島</a></li>
+                            <li><a href="#">香川</a></li>
+                            <li><a href="#">愛媛</a></li>
+                            <li><a href="#">高知</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 九州・沖縄モーダル -->
+                    <div class="modal" id="modal-kyusyu">
+                        <ul>
+                            <li><a href="#">福岡</a></li>
+                            <li><a href="#">佐賀</a></li>
+                            <li><a href="#">長崎</a></li>
+                            <li><a href="#">熊本</a></li>
+                            <li><a href="#">大分</a></li>
+                            <li><a href="#">宮崎</a></li>
+                            <li><a href="#">鹿児島</a></li>
+                            <li><a href="#">沖縄</a></li>
+                        </ul>
+                    </div>
+                    <div id="modal-sp-close-btn">
+                        <img src="../images/top/modal-back-btn-img.png" alt="img">戻る
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- fixed-area -->
+        <section class="fixed-area">
+            <a href="#">
+                <img src="../images/top/pc-icon.png" alt="pc-icon">
+                スクール<br>体験申込
+            </a>
+        </section>
+        <section class="fixed-area-sp">
+            <a href="#">
+                <div>お子さんと一緒に<br>トライアルできる！</div>
+                <div>
+                    <img src="../images/top/pc-icon.png" alt="pc-icon">
+                    スクール体験申込
+                </div>
+            </a>
+        </section>
+
+        <!-- cta-area -->
+        <section class="cta-area">
+            <div class="container">
+                <p>
+                    授業に関する質問やご相談、導入に関することなど、<br class="br-sp-none">
+                    まずはお気軽にご相談ください。
+                </p>
+                <div>
+                    <a href="#">Contact Us<span class="arrow-container"><img class="arrow" src="../images/top/arrow-w-img.png" alt="arrow-w-img"></span></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <div>
+            <a href="/">
+                <img src="../images/top/logo-w.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="../about/">About</a>
+                </li>
+                <li>
+                    <a href="#">Search</a>
+                </li>
+                <li>
+                    <a href="#">Column</a>
+                </li>
+                <li>
+                    <a href="../contact/">Contact</a>
+                </li>
+                <li>
+                    <a href="../privacypolicy/">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="../curriculum/">Curriculum</a>
+                </li>
+                <li>
+                    <a href="../corporate/">Corporate</a>
+                </li>
+                <li>
+                    <a href="../franchise/">Franchise</a>
+                </li>
+                <li>
+                    <a href="../faq/">FAQ</a>
+                </li>
+            </ul>
+            <small>&copy; FCE Education co.,Ltd. All Rights Reserved.</small>
+        </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

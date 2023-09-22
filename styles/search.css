@@ -1,0 +1,645 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1.2px;
+    color: #414C57;
+}
+.br-sp-none{
+    display: none;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+/* breadcrumb-area */
+.breadcrumb-area{
+    padding: 50px 0;
+}
+.breadcrumb-area > .container > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.breadcrumb-area > .container > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li > a.current-page {
+    color: #414C57;
+}
+.breadcrumb-area > .container > ul > li:not(.current-li):after {
+    content: ">";
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li:last-child:after {
+    content: "";
+}
+/* search-area */
+.search-area{
+    padding: 100px 0;
+}
+.search-area > .container > .text-wrapper > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.search-area > .container > .text-wrapper > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.search-area > .container > .text-wrapper > p{
+    line-height: 2;
+    margin: 45px 0;
+}
+.search-area > .container > .container{
+    background-image: url(../images/top/map.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%; 
+    height: 700px;
+    position: relative;
+    margin-top: 100px;
+}
+.search-area > .container > .container > .container > .region > div{
+    position: relative;
+}
+.search-area > .container > .container > .region > div > img{
+    display: block;
+    width: 100%;
+}
+.search-area > .container > .container > #hokkaido{
+    position: absolute;
+    top: 6%;
+    left: 60%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #hokkaido > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background-color: #D6DAE0;
+}
+.search-area > .container > .container > #tohoku{
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #tohoku > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background-color: #D6DAE0;
+}
+.search-area > .container > .container > #kanto{
+    position: absolute;
+    top: 72%;
+    left: 58%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #kanto > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background-color: #D6DAE0;
+}
+.search-area > .container > .container > #tokai{
+    position: absolute;
+    top: 56%;
+    left: 33%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #tokai > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background-color: #D6DAE0;
+}
+
+.search-area > .container > .container > #kinki{
+    position: absolute;
+    top: 80%;
+    left: 44%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #kinki > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background-color: #D6DAE0;
+}
+.search-area > .container > .container > #tyugoku{
+    position: absolute;
+    top: 83%;
+    left: 34%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #tyugoku > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background-color: #D6DAE0;
+}
+.search-area > .container > .container > #kyusyu{
+    position: absolute;
+    top: 73%;
+    left: 15%;
+    cursor: pointer;
+}
+.search-area > .container > .container > #kyusyu > div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background-color: #D6DAE0;
+    transition: all .3s;
+}
+.search-area > .container > .container > #hokkaido:hover > div::before,
+.search-area > .container > .container > #tohoku:hover > div::before,
+.search-area > .container > .container > #kanto:hover > div::before,
+.search-area > .container > .container > #tokai:hover > div::before,
+.search-area > .container > .container > #kinki:hover > div::before,
+.search-area > .container > .container > #tyugoku:hover > div::before,
+.search-area > .container > .container > #kyusyu:hover > div::before {
+    scale: 1.3;
+    transition: all 0.3s ease-in-out;
+}
+.sp-trigger{
+    display: none;
+}
+/* modal */
+.search-area > .container > .container > .modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 400px;
+    width: 100%;
+    display: none;
+    z-index: 5000;
+}
+.search-area > .container > .container > .modal > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    
+}
+.search-area > .container > .container > .modal > ul > li{
+    flex-basis: 200px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    line-height: 3;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px lightgray;
+}
+.search-area > .container > .container > .modal > ul > li > a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 10px;
+}
+.search-area > .container > .container > .modal > ul > li > a:hover{
+    background-color: rgb(245, 245, 245);
+    color: #0C80CF;
+}
+.search-area > .container > .container > .modal > ul > li:nth-child(odd){
+    border-right: 1px solid lightgray;
+}
+#modal-sp-close-btn{
+    display: none;
+}
+/* fixed-area */
+.fixed-area{
+    position: fixed;
+    top: 90%;
+    right: 0;
+    transform: translateY(-90%);
+    background-color: #0C80CF;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000;   
+}
+.fixed-area:hover{
+    background-color: rgb(61, 176, 254);
+}
+.fixed-area > a{
+    padding: 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 13px;
+}
+.fixed-area > a > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+/* fixed-area-sp */
+.fixed-area-sp{
+    position: fixed;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    display: none;
+}
+.fixed-area-sp > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.fixed-area-sp > a > div:first-child{
+    flex: 3.5;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px 0;
+    height: 90px;
+    color: #3294D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.fixed-area-sp > a > div:nth-child(2){
+    flex: 6.5;
+    text-align: center;
+    background-color: #0C80CF;
+    padding: 15px 0;
+    height: 90px;
+    color: #fff;
+}
+.fixed-area-sp > a > div:nth-child(2) > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+
+/* cta-area */
+.cta-area {
+    padding: 100px 0;
+    background-color: #0C80CF;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-area::before {
+    content: "";
+    width: 800px;
+    height: 700px;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff29;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opcity 0.5s ease;
+    pointer-events: none;
+}
+.cta-area:hover::before {
+    width: 150%;
+    height: 350%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.cta-area > .container > p {
+    text-align: center;
+    color: #fff;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 78px;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a > img {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 矢印アニメーション用の追加CSS */
+.arrow-container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 27px;
+}
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 27px;
+}
+
+.cta-area:hover .arrow {
+    left: 150%;
+}
+
+.arrow-container::before {
+    content: "";
+    background-image: url("../images/top/arrow-w-img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 36px;
+    height: 27px;
+    right: 150%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 2;
+}
+
+.cta-area:hover .arrow-container::before {
+    right: 50%;
+    transform: translate(50%, 0);
+    opacity: 1;
+}
+@media screen and (max-width: 1850px){
+    .search-area > .container > .container > #kanto {
+        position: absolute;
+        top: 71%;
+        left: 56.5%;
+        cursor: pointer;
+    }
+    .search-area > .container > .container > #tokai {
+        position: absolute;
+        top: 57%;
+        left: 31%;
+        cursor: pointer;
+    }
+    .search-area > .container > .container > #kinki {
+        top: 80%;
+        left: 42%;
+    }
+    .search-area > .container > .container > #tyugoku {
+        top: 82.5%;
+        left: 33%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        top: 72%;
+        left: 13%;
+    }
+}
+@media screen and (max-width: 1750px){
+    .search-area > .container > .container > #tyugoku {
+        left: 32%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        left: 11%;
+    }
+}
+@media screen and (max-width: 1650px){
+    .search-area > .container > .container > #hokkaido {
+        left: 62%;
+    }
+    .search-area > .container > .container > #kinki {
+        left: 41%;
+    }
+    .search-area > .container > .container > #tyugoku {
+        top: 82.5%;
+        left: 30%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        top: 72%;
+        left: 8.5%;
+    }
+}
+@media screen and (max-width: 1550px){
+    .search-area > .container > .container > #tohoku {
+        left: 57%;
+    }
+    .search-area > .container > .container > #tokai {
+        left: 27%;
+    }
+    .search-area > .container > .container > #tyugoku {
+        top: 82.5%;
+        left: 29%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1450px){
+    .search-area > .container > .container > #kanto {
+        left: 59.5%;
+    }
+    .search-area > .container > .container > #tyugoku {
+        left: 28%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        top: 72%;
+        left: 3%;
+    }
+}
+@media screen and (max-width: 1350px){
+    .search-area > .container > .container > #hokkaido {
+        left: 65%;
+    }
+    .search-area > .container > .container > #tokai {
+        left: 25%;
+    }
+    .search-area > .container > .container > #kinki {
+        left: 40%;
+    }
+    .search-area > .container > .container > #tyugoku {
+        left: 26%;
+    }
+    .search-area > .container > .container > #kyusyu {
+        top: 72%;
+        left: -2%;
+    }
+}
+@media screen and (max-width: 1250px){
+    .search-area > .container > .container > #kyusyu {
+        top: 72%;
+        left: -5%;
+    }
+}
+@media screen and (max-width: 1200px){
+    /* search-area */
+    .search-area {
+        padding: 50px 0;
+    }
+    .search-area > .container .container > {
+        background-image: url(../images/top/map.png);
+        background-position: 80% 100%;
+    }
+    .search-area > .container > .container > .text-wrapper > h2 {
+        font-size: 48px;
+    }
+    .search-area > .container > .text-wrapper > p {
+        margin: 45px 0 0;
+    }
+    .search-area > .container > .container > .region{
+        display: none;
+    }
+    .sp-trigger{
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 50%;transform: translateX(-50%);
+        width: 100%;
+    }
+    .sp-trigger > ul{
+        list-style: none;
+
+    }
+    .sp-trigger > ul > li{
+        display: inline-block;
+        width: 46%;
+        text-align: center;
+        border: 1px solid #636C75;
+        background-color: #fff;
+        padding: 15px 0;
+        margin: 10px 5px;
+        border-radius: 10px ;
+        font-size: 14px;
+    }
+    .search-area > .container > .container > .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 400px;
+    }
+    #modal-sp-close-btn {
+        position: absolute;
+        top: 80%;
+        left: 90%;
+        transform: translateX(-90%);
+        width: 100px;
+    }
+    #modal-sp-close-btn > img{
+        display: inline-block;
+        width: 40px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .search-area > .container > .text-wrapper > h2 {
+        font-size: 48px;
+    }
+    .search-area > .container > .container {
+        margin-top: 0px;
+        height: 500px;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 768px){
+    
+    /* fixed-area */
+    .fixed-area{
+        display: none;
+    }
+    .fixed-area-sp{
+        display: block;
+        z-index: 5;
+    }
+    /* cta-area */
+    .cta-area {
+        padding: 50px 0;
+    }
+    .cta-area > .container > div > a {
+        font-size: 62px;
+    }
+}
+@media screen and (max-width: 450px){
+    /* search-area */
+    .search-area > .container > .text-wrapper > h2 {
+        font-size: 38px;
+    }
+    .search-area > .container > .text-wrapper > h2 > span {
+        font-size: 14px;
+    }
+    .search-area > .container > .text-wrapper > p {
+        font-size: 14px;
+    }
+    .search-area > .container > .container > .modal > ul > li {
+        flex-basis: calc(100%/2);
+    }
+    /* cta-area */
+    .cta-area > .container > p {
+        font-size: 14px;
+    }
+    .cta-area > .container > div > a {
+        font-size: 42px;
+    }
+    /* fixed-area */
+    .fixed-area-sp > a > div:first-child {
+        height: 90px;
+        font-size: 12px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) > img {
+        width: 35px;
+        margin: 0 auto 3px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) {
+        height: 80px;
+    }
+    .fixed-area-sp > a > div:first-child {
+        height: 80px;
+    }
+}

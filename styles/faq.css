@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1.2px;
+    color: #414C57;
+}
+.br-sp-none{
+    display: none;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* main */
+main > .flex{
+    display: flex;
+}
+main > .flex > .left-contents{
+    flex: 8;
+}
+/* sidebar */
+main > .flex > .right-contents{
+    flex: 2;
+    border-left: 1px solid lightgray;
+}
+main > .flex > .right-contents > ul{
+    list-style: none;
+    width: 60%;
+    margin: 0 auto;
+    position: sticky;
+    top: 30%;
+    left: 50%;
+}
+main > .flex > .right-contents > ul > li{
+    padding-left: 20px;
+}
+main > .flex > .right-contents > ul > li:not(:last-child){
+    margin-bottom: 25px;
+}
+main > .flex > .right-contents > ul > li:first-child{
+    border-left: 3px solid #0C80CF;
+}
+main > .flex > .right-contents > ul > li > a{
+    text-decoration: none;
+}
+
+/* breadcrumb-area */
+.breadcrumb-area{
+    padding: 50px 0;
+}
+.breadcrumb-area > .container > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.breadcrumb-area > .container > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li > a.current-page {
+    color: #414C57;
+}
+.breadcrumb-area > .container > ul > li:not(.current-li):after {
+    content: ">";
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li:last-child:after {
+    content: "";
+}
+
+/* faq-area */
+.faq-area{
+    padding: 100px 0;
+}
+.faq-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.faq-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.faq-area > .container > .contents > .category > .title{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+.accordion-container {
+    margin: 50px auto 0;
+    width: 100%;
+}
+.accordion-list{
+    border-top: 1px solid lightgray;
+}
+.accordion-list:last-child{
+    border-bottom: 1px solid lightgray;
+}
+.accordion-title {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 35px 10% 35px 0;
+    position: relative;
+    font-weight: bold;
+}
+.accordion-title > .flex{
+    display: flex;
+    align-items: center;
+}
+.accordion-title > .flex > div:first-child{
+    flex: 0.5;
+    color: #6C7C8D;
+    font-size: 20px;
+}
+.accordion-title> .flex > div:nth-child(2){
+    flex: 9.5;
+}
+.accordion-title:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 1px;
+    width: 20px;
+    background: #0C80CF;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+}
+.accordion-title:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 1px;
+    width: 20px;
+    background: #0C80CF;
+    transition: all .3s ease-in-out;
+}
+.accordion-title.open:before {
+    transform: rotate(180deg);
+}
+.accordion-title.open:after {
+    opacity: 0;
+}
+.accordion-text {
+    display: none;
+    padding: 0px 10% 35px 0;
+}
+.accordion-text > .flex{
+    display: flex;
+    align-items: center;
+}
+.accordion-text > .flex > div:first-child{
+    flex: 0.5;
+    color: #9CADB9;
+    font-size: 20px;
+}
+.accordion-text > .flex > div:nth-child(2){
+    flex: 9.5;
+}
+/* fixed-area */
+.fixed-area{
+    position: fixed;
+    top: 90%;
+    right: 0;
+    transform: translateY(-90%);
+    background-color: #0C80CF;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000;
+}
+.fixed-area:hover{
+    background-color: rgb(61, 176, 254);
+}
+.fixed-area > a{
+    padding: 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 13px;
+}
+.fixed-area > a > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+/* fixed-area-sp */
+.fixed-area-sp{
+    position: fixed;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    display: none;
+}
+.fixed-area-sp > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.fixed-area-sp > a > div:first-child{
+    flex: 3.5;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px 0;
+    height: 90px;
+    color: #3294D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.fixed-area-sp > a > div:nth-child(2){
+    flex: 6.5;
+    text-align: center;
+    background-color: #0C80CF;
+    padding: 15px 0;
+    height: 90px;
+    color: #fff;
+}
+.fixed-area-sp > a > div:nth-child(2) > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+
+/* cta-area */
+.cta-area {
+    padding: 100px 0;
+    background-color: #0C80CF;
+    position: relative;
+    overflow: hidden; /* 追加 */
+    overflow: hidden;
+}
+
+.cta-area::before {
+    content: "";
+    width: 800px;
+    height: 700px;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff29;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opcity 0.5s ease;
+    pointer-events: none;
+}
+.cta-area:hover::before {
+    width: 150%;
+    height: 350%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.cta-area > .container > p {
+    text-align: center;
+    color: #fff;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 78px;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a > img {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 矢印アニメーション用の追加CSS */
+.arrow-container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 27px;
+}
+.arrow {
+    display: inline-block;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 27px;
+}
+
+.cta-area:hover .arrow {
+    left: 150%;
+}
+.arrow-container::before {
+    content: "";
+    background-image: url("../images/top/arrow-w-img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 36px;
+    height: 27px;
+    right: 150%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 2;
+}
+.cta-area:hover .arrow-container::before {
+    right: 50%;
+    transform: translate(50%, 0);
+    opacity: 1;
+}
+@media screen and (max-width: 768px){
+    main > .flex {
+        display: block;
+    }
+    main > .flex > .right-contents {
+        display: none;
+    }
+    /* faq-area */
+    .faq-area {
+        padding: 50px 0;
+    }
+    .faq-area > .container > h2 {
+        font-size: 48px;
+    }
+    .faq-area > .container > .contents {
+        margin-top: 50px;
+    }
+    .accordion-title > .flex,
+    .accordion-text > .flex {
+        display: block;
+    }
+    .accordion-title > .flex > div:first-child,
+    .accordion-text > .flex > div:first-child {
+        margin-bottom: 5px;
+    }
+    /* fixed-area */
+    .fixed-area{
+        display: none;
+    }
+    .fixed-area-sp{
+        display: block;
+        z-index: 5;
+    }
+    
+    /* cta-area */
+    .cta-area{
+        padding: 50px 0;
+    }
+    .cta-area > .container > div > a {
+        font-size: 62px;
+    }
+}
+@media screen and (max-width: 450px){
+    /* faq-area */
+    .faq-area > .container > h2 {
+        font-size: 38px;
+    }
+    .faq-area > .container > .contents > .category > .title {
+        font-size: 18px;
+    }
+    .accordion-title:before {
+        right: 5px;
+        height: 1px;
+        width: 20px;
+    }
+    .accordion-title:after {
+        right: 5px;
+        height: 1px;
+        width: 20px;
+    }
+    /* cta-area */
+    .cta-area > .container > p {
+        font-size: 14px;
+    }
+    .cta-area > .container > div > a {
+        font-size: 42px;
+    }
+    /* fixed-area */
+    .fixed-area-sp > a > div:first-child {
+        height: 90px;
+        font-size: 12px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) > img {
+        width: 35px;
+        margin: 0 auto 3px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) {
+        height: 80px;
+    }
+    .fixed-area-sp > a > div:first-child {
+        height: 80px;
+    }
+}

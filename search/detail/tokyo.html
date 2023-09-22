@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ClassList</title>
+    <link rel="stylesheet" href="../../../styles/parts/header.css">
+    <link rel="stylesheet" href="../../../styles/parts/footer.css">
+    <link rel="stylesheet" href="../../../styles/detail.css">
+    <!-- googlefont -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
+    <!-- Jquery/Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div>
+            <a href="/"><img src="../../images/top/logo.png" alt="logo"></a>
+        </div>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu">
+            <div id="close-menu" class="close-icon">×</div>
+            <img src="../../images/top/logo-w.png" alt="logo" id="sp-logo">
+            <ul>
+                <li>
+                    <a href="../../about/">About<span>ワンダーコードとは</span></a>
+                </li>
+                <li>
+                    <a href="../../curriculum/">Curriculum<span>カリキュラム</span></a>
+                </li>
+                <li>
+                    <a href="../../search/">Search<span>教室検索</span></a>
+                </li>
+                <li>
+                    <a href="../../corporate/">Corporate<span>会社概要</span></a>
+                </li>
+                <li>
+                    <a href="#">Column<span>コラム</span></a>
+                </li>
+                <li>
+                    <a href="../../franchise/">Franchise<span>フランチャイズ</span></a>
+                    </li>
+                <li>
+                    <a href="../../contact/">Contact<span>お問い合わせ</span></a>
+                </li>
+                <li>
+                    <a href="../../faq/">FAQ<span>よくあるご質問</span></a>
+                </li>
+                <li>
+                    <a href="../../privacypolicy/">Privacy Policy<span>プライバシーポリシー</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb-area">
+            <div class="container">
+                <ul>
+                    <li><a href="/">TOP</a></li>
+                    <li><a href="../../search/">Search</a></li>
+                    <li><a href="#" class="current-page">detail</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- class-area -->
+        <section class="class-area">
+            <div class="container">
+                <h2>
+                    <span>教室一覧</span>
+                    Class
+                </h2>
+                <div class="class-lists-area">
+                    <!-- クラスタブ -->
+                    <div>
+                        <div class="tab-content">
+                            <ul class="tab-items">
+                                <li class="tab_item"><span class="tab_link" data-tab-body="1">豊島区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="2">中央区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="3">新宿区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="4">大田区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="5">世田谷区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="6">渋谷区</span></li>
+                                <li class="tab_item"><span class="tab_link" data-tab-body="7">立川区</span></li>
+                                <!-- 省略 -->
+                            </ul>
+                            <!-- ポップアップ -->
+                            <section class="popup-area">
+                                <button class="modal-open">ホームティーチャー校<div class="img-container"></div></button>
+                            </section>
+                            <div class="tab-body">
+                                <div class="tab-body_item tab-body_item-1">
+                                    <h2>豊島区</h2>
+                                    <div>
+                                        <div class="card">
+                                            <h3>ワンダーコード本駒込校</h3>
+                                            <div>
+                                                <img src="../../../images/search/class-1.png">
+                                                <ul>
+                                                    <li>
+                                                        <b>種別</b><p class="more">ホームティーチャー校</p>
+                                                    </li>
+                                                    <li>
+                                                        <b>住所</b><p>東京都文京区本駒込 5-19-9<br><span>JR山手線 駒込駅 南口から徒歩15分</span></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-body_item tab-body_item-2">
+                                    <h2>中央区</h2>
+                                    <div>
+                                        <div class="card">
+                                            <h3>ワンダーコード本駒込校</h3>
+                                            <div>
+                                                <img src="../../../images/search/class-1.png">
+                                                <ul>
+                                                    <li>
+                                                        <b>種別</b><p>ホームティーチャー校</p>
+                                                    </li>
+                                                    <li>
+                                                        <b>住所</b><p>東京都文京区本駒込 5-19-9<br><span>JR山手線 駒込駅 南口から徒歩15分</span></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <h3>ワンダーコード本駒込校</h3>
+                                            <div>
+                                                <img src="../../../images/search/class-1.png">
+                                                <ul>
+                                                    <li>
+                                                        <b>種別</b><p>ホームティーチャー校</p>
+                                                    </li>
+                                                    <li>
+                                                        <b>住所</b><p>東京都文京区本駒込 5-19-9<br><span>JR山手線 駒込駅 南口から徒歩15分</span></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-body">
+                            <div class="modal-close">×</div>
+                            <div class="modal-content">
+                                <h3>ホームティーチャー校とは</h3>
+                                <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fixed-area -->
+        <section class="fixed-area">
+            <a href="#">
+                <img src="../../../images/top/pc-icon.png" alt="pc-icon">
+                スクール<br>体験申込
+            </a>
+        </section>
+        <section class="fixed-area-sp">
+            <a href="#">
+                <div>お子さんと一緒に<br>トライアルできる！</div>
+                <div>
+                    <img src="../../../images/top/pc-icon.png" alt="pc-icon">
+                    スクール体験申込
+                </div>
+            </a>
+        </section>
+
+        <!-- cta-area -->
+        <section class="cta-area">
+            <div class="container">
+                <p>
+                    授業に関する質問やご相談、導入に関することなど、<br class="br-sp-none">
+                    まずはお気軽にご相談ください。
+                </p>
+                <div>
+                    <a href="#">Contact Us<span class="arrow-container"><img class="arrow" src="../../../images/top/arrow-w-img.png" alt="arrow-w-img"></span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <div>
+            <a href="/">
+                <img src="../../../images/top/logo-w.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="../../about/">About</a>
+                </li>
+                <li>
+                    <a href="../../search/">Search</a>
+                </li>
+                <li>
+                    <a href="#">Column</a>
+                </li>
+                <li>
+                    <a href="../../contact/">Contact</a>
+                </li>
+                <li>
+                    <a href="../../privacypolicy/">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="../../curriculum/">Curriculum</a>
+                </li>
+                <li>
+                    <a href="../../corporate/">Corporate</a>
+                </li>
+                <li>
+                    <a href="../../franchise/">Franchise</a>
+                </li>
+                <li>
+                    <a href="../../faq/">FAQ</a>
+                </li>
+            </ul>
+            <small>&copy; FCE Education co.,Ltd. All Rights Reserved.</small>
+        </div>
+    </footer>
+    <script src="../../js/header.js"></script>
+    <script src="../../js/detail.js"></script>
+</body>
+</html>

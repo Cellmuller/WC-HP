@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1.2px;
+    color: #414C57;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+/* breadcrumb-area */
+.breadcrumb-area{
+    padding: 50px 0;
+}
+.breadcrumb-area > .container > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.breadcrumb-area > .container > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li > a.current-page {
+    color: #414C57;
+}
+.breadcrumb-area > .container > ul > li:not(.current-li):after {
+    content: ">";
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li:last-child:after {
+    content: "";
+}
+/* contact-area */
+.contact-area{
+    padding: 100px 0;
+}
+.contact-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.contact-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.contact-area > .container > h3 {
+    margin-top: 45px;
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 15px;
+    position: relative;
+}
+
+.contact-area > .container > h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #0C80CF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contact-area > .container > p{
+    line-height: 2;
+    margin: 45px 0 20px;
+}
+.contact-area > .container > div:nth-of-type(1) > a{
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+}
+.contact-area > .container > div:nth-of-type(1) > a > div{
+    display: inline-block;
+}
+.contact-area > .container > div:nth-of-type(1) > a > div > img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+.contact-area > .container > div:nth-of-type(1) > a > div > span{
+    margin: 0 10px 0 5px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.contact-area > .container > .status{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    margin: 100px auto 0;
+}
+.contact-area > .container > .status > div:nth-child(odd){
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.contact-area > .container > .status > div:nth-child(even){
+    flex: 2;
+    position: relative;
+}
+.contact-area > .container > .status > div:nth-child(odd) > div:first-child{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #9CADB9;
+    margin: 0 auto;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-area > .container > .status > div:nth-child(odd) > div:first-child.active{
+    background-color: #0C80CF;
+}
+.contact-area > .container > .status > div:nth-child(odd) > div:nth-child(2){
+    margin-top: 25px;
+    color: #9CADB9;
+}
+.contact-area > .container > .status > div:nth-child(odd) > div:nth-child(2).active{
+    color: #0C80CF;
+}
+.contact-area > .container > .status > div:nth-child(even) > div::before{
+    content:"";
+    border-bottom: 1px dashed lightgray;
+    position: absolute;
+    width: 100%;
+    max-width: 150px;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* form-area */
+.form-area{
+    padding: 100px 0;
+}
+.form-area > .container{
+    background-color: #EEF1F6;
+    padding: 150px 0;
+    border-radius: 20px;
+}
+.form-area > .container > form > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #414C57;
+    font-weight: normal;
+    margin-top: 10px;
+}
+.form-area > .container > form > .container > .rows{
+    margin-top: 100px;
+}
+.form-area > .container > form > .container > .rows > .row:not(:last-child){
+    margin-bottom: 35px;
+}
+.form-area > .container > form > .container > .rows > .row > div:first-child{
+    margin-bottom: 10px;
+}
+.form-area > .container > form > .container > .rows > .row > div:first-child > span{
+    color: #D90425;
+}
+.form-area > .container > form > .container > .rows > .row > div:nth-child(2){
+    padding: 15px 0;
+}
+.form-area > .container > form > .container > .rows > .row > input,
+.form-area > .container > form > .container > .rows > .row > textarea,
+.form-area > .container > form > .container > .rows > .row > select{
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    padding: 15px;
+    outline: none;
+    resize: none;
+}
+.form-area > .container > form > .container > .rows > .row > select{
+    width: 35%;
+}
+
+.form-area > .container > form > .container > .rows > .row > label{
+    display: block;
+    cursor: pointer;
+    padding: 15px 0;
+}
+.form-area > .container > form > .container > .rows > .row > label:not(:last-child){
+    margin-bottom: 10px;
+}
+.form-area > .container > form > .container > .rows > .row > label > input{
+    margin-right: 8px;
+}
+.form-area > .container > form > .container > .rows > .row > textarea{
+    height: 150px;
+}
+.form-area > .container > form > .container > .rows > .privacy{
+    background-color: #ffffff;
+    padding: 50px 0;
+    height: 500px;
+    overflow-y: scroll;
+    background-image: url(../images/contact/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+/* Chrome, Safari用 */
+.form-area > .container > form > .container > .rows > .privacy::-webkit-scrollbar {
+    display: none;
+}
+.form-area > .container > form > .container > .rows > .row > .privacy > .container{
+    width: 90%;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > h3{
+    text-align: center;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > h3 > span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.form-area > .container > form > .container > .rows > .privacy > .container > h3 > span::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(to right, #D64A92 50%, #7C68D1 50%);
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+
+.form-area > .container > form > .container > .rows > .privacy > .container > p{
+    margin: 35px 0 50px;
+    line-height: 2;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > .contents{
+    line-height: 2;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row:not(:last-child){
+    margin-bottom: 35px;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row > div:first-child{
+    font-weight: bold;
+    font-size: 18px;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row > p{
+    line-height: 2;
+}
+.form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row > p > span{
+    font-weight: bold;
+}
+.form-area > .container > form > .container > .rows > .check{
+    margin-top: 25px;
+}
+.form-area > .container > form > .container > .rows > .check input{
+    margin-right: 5px;
+}
+.form-area > .container > form > .container > .rows > .check label{
+    cursor: pointer;
+}
+.form-area > .container > form > .container > .button-wrapper{
+    text-align: center;
+    margin-top: 100px;
+}
+.form-area > .container > form > .container > .button-wrapper > a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #0C80CF;
+    color: #fff;
+    padding: 15px;
+    border-radius: 35px;
+    width: 200px;
+    transition: all .2s;
+}
+.form-area > .container > form > .container > .button-wrapper > a:hover{
+    opacity: .8;
+}
+@media screen and (max-width:768px) {
+    /* contact-area  */
+    .contact-area {
+        padding: 50px 0;
+    }
+    .contact-area > .container > h2 {
+        font-size: 48px;
+    }
+    .contact-area > .container > div:nth-of-type(1) > a {
+        font-size: 20px;
+    }
+    .contact-area > .container > div:nth-of-type(1) > a > div{
+        display: block;
+    }
+    .contact-area > .container > .status {
+        max-width: 500px;
+        width: 100%;
+    }
+    .contact-area > .container > .status > div:nth-child(odd){
+        flex: 2;
+        text-align: center;
+        position: relative;
+    }
+    .contact-area > .container > .status > div:nth-child(even){
+        flex: 2;
+        position: relative;
+    }
+    .contact-area > .container > .status > div:nth-child(odd) > div:nth-child(2) {
+        font-size: 14px;
+    }
+    /* form-area */
+    .form-area{
+        padding: 50px 0;
+        background-color: #EEF1F6;
+    }
+    .form-area > .container {
+        padding: 35px 0;
+        width: 100%;
+    }
+    .form-area > .container > form > .container > .rows {
+        margin-top: 50px;
+    }
+    .form-area > .container > form > .container > .rows > .row > select {
+        width: 100%;
+    }
+    .form-area > .container > form > .container > .rows > .row > label {
+        padding: 15px 0;
+    }
+    .form-area > .container > form > .container > .rows > .row > textarea {
+        height: 250px;
+    }
+    /* footer */
+    footer {
+        display: block;
+        padding-bottom: 35px;
+    }
+}
+@media screen and (max-width: 450px){
+    /* contact-area */
+    .contact-area > .container > h2 {
+        font-size: 38px;
+    }
+    .contact-area > .container > h2 > span {
+        font-size: 14px;
+    }
+    .contact-area > .container > h3 {
+        margin-top: 35px;
+        font-size: 20px;
+    }
+    .contact-area > .container > p {
+        font-size: 14px;
+        margin: 35px 0 20px;
+    }
+    /* form-area */
+    .form-area > .container > form > .container > h2{
+        font-size: 20px;
+    }
+    .form-area > .container > form > .container > h2 > span {
+        font-size: 14px;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > h3 > span {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 35px;
+        position: relative;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > p {
+        font-size: 14px;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > .contents {
+        font-size: 14px;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row > div:first-child {
+        font-size: 14px;
+    }
+    .form-area > .container > form > .container > .rows > .privacy > .container > .contents > .row > p {
+        font-size: 14px;
+    }
+    .form-area > .container > form > .container > .rows > .check label {
+        font-size: 14px;
+    }
+} 

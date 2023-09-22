@@ -1,0 +1,935 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1.2px;
+    color: #414C57;
+}
+.br-sp-none{
+    display: none;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* main */
+main > .flex{
+    display: flex;
+}
+main > .flex > .left-contents{
+    flex: 8;
+}
+/* sidebar */
+main > .flex > .right-contents{
+    flex: 2;
+    border-left: 1px solid lightgray;
+}
+main > .flex > .right-contents > ul{
+    list-style: none;
+    width: 60%;
+    margin: 0 auto;
+    position: sticky;
+    top: 30%;
+    left: 50%;
+}
+main > .flex > .right-contents > ul > li{
+    padding-left: 20px;
+}
+main > .flex > .right-contents > ul > li:not(:last-child){
+    margin-bottom: 25px;
+}
+main > .flex > .right-contents > ul > li:first-child{
+    border-left: 3px solid #0C80CF;
+}
+main > .flex > .right-contents > ul > li > a{
+    text-decoration: none;
+}
+
+/* breadcrumb-area */
+.breadcrumb-area{
+    padding: 50px 0;
+}
+.breadcrumb-area > .container > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.breadcrumb-area > .container > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li > a.current-page {
+    color: #414C57;
+}
+.breadcrumb-area > .container > ul > li:not(.current-li):after {
+    content: ">";
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #0C80CF;
+}
+.breadcrumb-area > .container > ul > li:last-child:after {
+    content: "";
+}
+
+/* service-area */
+.service-area{
+    padding: 100px 0;
+}
+.service-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.service-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.service-area > .container > div:nth-of-type(1){
+    font-size: 24px;
+    color: #414C57;
+    font-weight: bold;
+    margin: 45px 0;
+}
+.service-area > .container > p{
+    line-height: 2;
+}
+.service-area > .container > .flex-wrapper.pc{
+    border: 1px dashed lightgray;
+    border-radius: 200px;
+    position: relative;
+    padding: 35px;
+    margin-top: 100px;
+}
+.service-area > .container > .flex-wrapper.pc > .text{
+    position: absolute;
+    top: -16px;
+    background-color: #fff;
+    padding: 0 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0C80CF;
+    font-size: 20px;
+}
+.service-area > .container > .flex-wrapper.pc > .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF1F6;
+    border-radius: 200px;
+}
+.service-area > .container > .flex-wrapper.pc > .flex > div{
+    padding: 35px;
+}
+.service-area > .container > .flex-wrapper.pc > .flex > div > img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.service-area > .container > .flex-wrapper.sp{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.service-area > .container > .flex-wrapper.sp > div{
+    border: 1px dashed lightgray;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px auto 0;
+}
+.service-area > .container > .flex-wrapper.sp > div > div{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: #EEF1F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0C80CF;
+    font-weight: bold;
+}
+.service-area > .container > .flex-wrapper.sp > div > img{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service-area > .container > .flex-wrapper.sp > div > .franchise-sp-img{
+    display: none;
+}
+.service-area > .container > .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.service-area > .container > .flex > div:first-child{
+    flex: 1;
+}
+
+.service-area > .container > .flex > div:nth-child(2){
+    flex: 1;
+}
+.service-area > .container > .flex > div:first-child > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.service-area > .container > .flex > div:first-child > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.service-area > .container > .flex > div:first-child > div{
+    font-size: 24px;
+    color: #414C57;
+    font-weight: bold;
+    margin: 45px 0;
+}
+.service-area > .container > .flex > div:first-child > p{
+    line-height: 2;
+}
+.service-area > .container > .flex > div:nth-child(2) > img{
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+}
+.service-area > .container > .card-wrapper{
+    margin-top: 150px;
+}
+.service-area > .container > .card-wrapper > p{
+    margin-bottom: 75px;
+    line-height: 2;
+}
+.service-area > .container > .card-wrapper > .card{
+    padding: 75px 0;
+    border-top: 1px solid lightgray;
+}
+.service-area > .container > .card-wrapper > .card:last-child{
+    border-bottom: 1px solid lightgray;
+}
+.service-area > .container > .card-wrapper > .card > div{
+    font-size: 20px;
+    font-weight: bold;
+}
+.service-area > .container > .card-wrapper > .card > p{
+    line-height: 2;
+    margin-top: 35px;
+}
+/* カルーセル */
+.splide {
+    padding: 75px 0;
+}
+.splide__slide img {
+    width: 100%;
+    vertical-align: initial !important;
+}
+.splide__pagination {
+    bottom: 0 !important;
+    justify-content: flex-start !important;
+}
+/* 通常のドット */
+.splide__pagination__page {
+    background-image: url('../../../images/search/normal-dot-image.png') !important;
+    background-size: cover !important;
+    border: none !important; 
+    width: 50px !important;
+    height: 52px!important;
+    background-color: transparent !important;
+}
+
+/* アクティブなドット */
+.splide__pagination__page.is-active {
+    transform: scale(1) !important;
+    background-image: url('../../../images/search/active-dot-image.png') !important;
+}
+/* step-area */
+.step-area{
+    padding: 100px 0;
+}
+.step-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.step-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.step-area  > .container > .contents{
+    margin-top: 100px;
+}
+.step-area  > .container > .contents > .flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.step-area  > .container > .contents > .flex:not(:last-child){
+    margin-bottom: 35px;
+}
+.step-area  > .container > .contents > .flex > div:first-child{
+    flex: 1;
+    color: #0C80CF;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.step-area  > .container > .contents > .flex:first-child > div:first-child::before{
+    content: "";
+    border-left: 2px dashed lightgray;
+    height: 110px;
+    position: absolute;
+    left: 50%;
+    top: 200%;
+}
+.step-area  > .container > .contents > .flex:nth-child(2) > div:first-child::before{
+    content: "";
+    border-left: 2px dashed lightgray;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 200%;
+}
+.step-area  > .container > .contents > .flex:nth-child(3) > div:first-child::before{
+    content: "";
+    border-left: 2px dashed lightgray;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 200%;
+}
+.step-area  > .container > .contents > .flex:nth-child(4) > div:first-child::before{
+    content: "";
+    border-left: 2px dashed lightgray;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 200%;
+}
+.step-area  > .container > .contents > .flex:last-child > div:first-child::before{
+    display: none;
+}
+.step-area  > .container > .contents > .flex > div:nth-child(2){
+    flex: 9;
+    padding: 0 20px;
+}
+.step-area  > .container > .contents > .flex > div:nth-child(2) > div{
+    font-size: 18px;
+    font-weight: bold;
+}
+.step-area  > .container > .contents > .flex > div:nth-child(2) > p{
+    line-height: 2;
+    margin-top: 25px;
+}
+/* example-area */
+.example-area{
+    padding: 100px 0;
+}
+.example-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.example-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.example-area > .container > .contents{
+    margin-top: 100px;
+}
+.example-area > .container > .contents > .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    padding: 50px 0;
+}
+.example-area > .container > .contents > .flex:last-child{
+    border-bottom: 1px solid lightgray;
+}
+.example-area > .container > .contents > .flex > div:first-child{
+    flex: 5.5;
+}
+.example-area > .container > .contents > .flex > div:nth-child(2){
+    flex: 4.5;
+}
+.example-area > .container > .contents > .flex > div:first-child > div > span{
+    color: #0C80CF;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.example-area > .container > .contents > .flex > div:first-child > div > div{
+    font-size: 24px;
+    font-weight: bold;
+}
+.example-area > .container > .contents > .flex > div:first-child > p{
+    margin-top: 35px;
+    line-height: 2;
+}
+.example-area > .container > .contents > .flex > div:nth-child(2) > img{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* faq-area */
+.faq-area{
+    padding: 100px 0;
+}
+.faq-area > .container > h2{
+    font-size: 62px;
+    color: #414C57;
+}
+.faq-area > .container > h2 > span{
+    display: block;
+    font-size: 16px;
+    color: #9CADB9;
+    margin-bottom: 20px;
+}
+.faq-area > .container > .contents{
+    margin-top: 100px;
+}
+.faq-area > .container > .contents > .category:not(:last-child){
+    margin-bottom: 100px;
+}
+.accordion-container {
+    margin: 50px auto 0;
+    width: 100%;
+}
+.accordion-list{
+    border-top: 1px solid lightgray;
+}
+.accordion-list:last-child{
+    border-bottom: 1px solid lightgray;
+}
+.accordion-title {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 35px 10% 35px 0;
+    position: relative;
+    font-weight: bold;
+}
+.accordion-title > .flex{
+    display: flex;
+    align-items: center;
+}
+.accordion-title > .flex > div:first-child{
+    flex: 0.5;
+    color: #6C7C8D;
+    font-size: 20px;
+}
+.accordion-title> .flex > div:nth-child(2){
+    flex: 9.5;
+}
+.accordion-title:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 1px;
+    width: 20px;
+    background: #0C80CF;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+}
+.accordion-title:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 1px;
+    width: 20px;
+    background: #0C80CF;
+    transition: all .3s ease-in-out;
+}
+.accordion-title.open:before {
+    transform: rotate(180deg);
+}
+.accordion-title.open:after {
+    opacity: 0;
+}
+.accordion-text {
+    display: none;
+    padding: 0px 10% 35px 0;
+}
+.accordion-text > .flex{
+    display: flex;
+    align-items: center;
+}
+.accordion-text > .flex > div:first-child{
+    flex: 0.5;
+    color: #9CADB9;
+    font-size: 20px;
+}
+.accordion-text > .flex > div:nth-child(2){
+    flex: 9.5;
+}
+
+
+/* fixed-area */
+.fixed-area{
+    position: fixed;
+    top: 90%;
+    right: 0;
+    transform: translateY(-90%);
+    background-color: #0C80CF;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000;
+}
+.fixed-area > a{
+    padding: 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 13px;
+}
+.fixed-area:hover{
+    background-color: rgb(61, 176, 254);
+}
+.fixed-area > a > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+/* fixed-area-sp */
+.fixed-area-sp{
+    position: fixed;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    display: none;
+}
+.fixed-area-sp > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.fixed-area-sp > a > div:first-child{
+    flex: 3.5;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px 0;
+    height: 90px;
+    color: #3294D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.fixed-area-sp > a > div:nth-child(2){
+    flex: 6.5;
+    text-align: center;
+    background-color: #0C80CF;
+    padding: 15px 0;
+    height: 90px;
+    color: #fff;
+}
+.fixed-area-sp > a > div:nth-child(2) > img{
+    display: block;
+    width: 40px;
+    margin: 0 auto 10px;
+}
+/* cta-area */
+.cta-area {
+    padding: 100px 0;
+    background-color: #0C80CF;
+    position: relative;
+    overflow: hidden; /* 追加 */
+    overflow: hidden;
+}
+
+.cta-area::before {
+    content: "";
+    width: 800px;
+    height: 700px;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff29;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opcity 0.5s ease;
+    pointer-events: none;
+}
+.cta-area:hover::before {
+    width: 150%;
+    height: 350%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.cta-area > .container > p {
+    text-align: center;
+    color: #fff;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 78px;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+}
+.cta-area > .container > div > a > img {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 矢印アニメーション用の追加CSS */
+.arrow-container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 27px;
+}
+.arrow {
+    display: inline-block;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 27px;
+}
+
+.cta-area:hover .arrow {
+    left: 150%;
+}
+.arrow-container::before {
+    content: "";
+    background-image: url("../images/top/arrow-w-img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 36px;
+    height: 27px;
+    right: 150%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 2;
+}
+.cta-area:hover .arrow-container::before {
+    right: 50%;
+    transform: translate(50%, 0);
+    opacity: 1;
+}
+@media screen and (max-width: 768px){
+    main > .flex {
+        display: block;
+    }
+    main > .flex > .right-contents {
+        display: none;
+    }
+    /* service-area */
+    .service-area {
+        padding: 50px 0;
+    }
+    .service-area > .container > h2 {
+        font-size: 48px;
+    }
+    .service-area > .container > .flex-wrapper.pc{
+        display: none;
+    }
+    .service-area > .container > .flex-wrapper.sp{
+        display: flex;
+    }
+    .service-area > .container > .flex {
+        margin-top: 50px;
+        display: block;
+    }
+    .service-area > .container > .flex > div:nth-child(2) {
+        margin-top: 50px;
+    }
+    .service-area > .container > .card-wrapper > p {
+        margin-bottom: 50px;
+    }
+    .service-area > .container > .card-wrapper > .card {
+        padding: 50px 0;
+    }
+    /* カルーセル */
+    .splide {
+        padding: 35px 0 75px;
+    }
+    .splide__pagination {
+        left: -12px !important;
+        bottom: 32px !important;
+    }
+    .splide__pagination__page {
+        background-image: url('../images/search/normal-dot-image-sp.png') !important;
+        width: 30px !important;
+        height: 32px!important;
+    }
+    .splide__pagination__page.is-active {
+        background-image: url('../images/search/active-dot-image-sp.png') !important;
+    }
+    /* step-area */
+    .step-area {
+        padding: 50px 0;
+    }
+    .step-area > .container > h2 {
+        font-size: 48px;
+    }
+    .step-area > .container > .contents {
+        margin-top: 50px;
+    }
+    .step-area > .container > .contents > .flex > div:first-child {
+        flex: 1.5;
+    }
+    .step-area > .container > .contents > .flex > div:nth-child(2) {
+        flex: 8.5;
+    }
+    /* example-area */
+    .example-area {
+        padding: 50px 0;
+    }
+    .example-area > .container > h2 {
+        font-size: 48px;
+    }
+    .example-area > .container > .contents {
+        margin-top: 50px;
+    }
+    .example-area > .container > .contents > .flex {
+        display: block;
+    }
+    .example-area > .container > .contents > .flex > div:nth-child(2) {
+        margin-top: 50px;
+    }
+    .example-area > .container > .contents > .flex > div:nth-child(2) > img {
+        width: 100%;
+    }
+    /* faq-area */
+    .faq-area {
+        padding: 50px 0;
+    }
+    .faq-area > .container > h2 {
+        font-size: 48px;
+    }
+    .faq-area > .container > .contents {
+        margin-top: 50px;
+    }
+    .accordion-title > .flex,
+    .accordion-text > .flex {
+        display: block;
+    }
+    .accordion-title > .flex > div:first-child,
+    .accordion-text > .flex > div:first-child {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+    /* fixed-area */
+    .fixed-area{
+        display: none;
+    }
+    .fixed-area-sp{
+        display: block;
+        z-index: 5;
+    }
+    
+    /* cta-area */
+    .cta-area {
+        padding: 50px 0;
+    }
+    .cta-area > .container > div > a {
+        font-size: 62px;
+    }
+}
+@media screen and (max-width: 450px){
+    /* service-area */
+    .service-area > .container > h2 {
+        font-size: 38px;
+    }
+    .service-area > .container > div:nth-of-type(1) {
+        font-size: 16px;
+        color: #414C57;
+        font-weight: bold;
+        margin: 35px 0;
+    }
+    .service-area > .container > p {
+        font-size: 14px;
+    }
+    .service-area > .container > .flex-wrapper.sp > div {
+        border: 1px dashed lightgray;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 50px auto 0;
+    }
+    .service-area > .container > .flex-wrapper.sp > div > div {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: #EEF1F6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0C80CF;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .service-area > .container > .flex-wrapper.sp > div > img {
+        top: 46%;
+    }
+    .service-area > .container > .flex-wrapper.sp > div > .franchise-sp-img{
+        display: none;
+    }
+    .service-area > .container > .flex-wrapper.sp > div > .franchise-sp-img {
+        display: block;
+    }
+    .service-area > .container > .flex > div:first-child > div {
+        font-size: 16px;
+        margin: 35px 0;
+    }
+    .service-area > .container > .flex > div:first-child > p {
+        font-size: 14px;
+    }
+    .service-area > .container > .flex > div:nth-child(2) > img {
+        width: 100%;
+    }
+    .service-area > .container > .card-wrapper {
+        margin-top: 50px;
+    }
+    .service-area > .container > .card-wrapper > p {
+        font-size: 14px;
+    }
+    .service-area > .container > .card-wrapper > .card {
+        padding: 35px 0;
+    }
+    .service-area > .container > .card-wrapper > .card > div {
+        font-size: 14px;
+    }
+    .service-area > .container > .card-wrapper > .card > p {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    /* step-area */
+    .step-area > .container > h2 {
+        font-size: 38px;
+    }
+    .step-area > .container > h2 > span {
+        font-size: 14px;
+    }
+    .step-area > .container > .contents > .flex > div:first-child {
+        flex: 2;
+    }
+    .step-area > .container > .contents > .flex > div:nth-child(2) {
+        flex: 8;
+    }
+    .step-area > .container > .contents > .flex > div:nth-child(2) > div {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .step-area > .container > .contents > .flex > div:nth-child(2) > p {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .step-area > .container > .contents > .flex:first-child > div:first-child::before {
+        content: "";
+        top: 130%;
+        border-left: 2px dashed lightgray;
+        height: 225px;
+    }
+    .step-area > .container > .contents > .flex:nth-child(2) > div:first-child::before {
+        height: 85px;
+        left: 50%;
+        top: 130%;
+    }
+    .step-area > .container > .contents > .flex:nth-child(3) > div:first-child::before {
+        height: 110px;
+        left: 50%;
+        top: 130%;
+    }
+    .step-area > .container > .contents > .flex:nth-child(4) > div:first-child::before {
+        height: 140px;
+        left: 50%;
+        top: 130%;
+    }
+    .example-area > .container > h2 {
+        font-size: 38px;
+    }
+    .example-area > .container > h2 > span {
+        font-size: 14px;
+    }
+    .example-area > .container > .contents > .flex {
+        padding: 35px 0;
+    }
+    .example-area > .container > .contents > .flex > div:first-child > div > div {
+        font-size: 16px;
+    }
+    .example-area > .container > .contents > .flex > div:first-child > p {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    .accordion-title:before {
+        right: 5px;
+        height: 1px;
+        width: 20px;
+    }
+    .accordion-title:after {
+        right: 5px;
+        height: 1px;
+        width: 20px;
+    }
+    /* cta-area */
+    .cta-area > .container > p {
+        font-size: 14px;
+    }
+    .cta-area > .container > div > a {
+        font-size: 42px;
+    }
+    /* fixed-area */
+    .fixed-area-sp > a > div:first-child {
+        height: 90px;
+        font-size: 12px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) > img {
+        width: 35px;
+        margin: 0 auto 3px;
+    }
+    .fixed-area-sp > a > div:nth-child(2) {
+        height: 80px;
+    }
+    .fixed-area-sp > a > div:first-child {
+        height: 80px;
+    }
+}
