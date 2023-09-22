@@ -385,6 +385,9 @@ main > .flex > .right-contents > ul > li > a{
     border-radius: 10px 0 0 10px;
     z-index: 1000;
 }
+.fixed-area:hover{
+    background-color: rgb(61, 176, 254);
+}
 .fixed-area > a{
     padding: 25px;
     display: inline-block;
