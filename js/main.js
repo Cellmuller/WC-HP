@@ -71,13 +71,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   var hoverImages = {
-    hokkaido: "../images/top/region-b-img.png",
-    tohoku: "../images/top/region-b-img-2.png",
-    kanto: "../images/top/region-b-img-3.png",
-    tokai: "../images/top/region-b-img-4.png",
-    kinki: "../images/top/region-b-img-5.png",
-    tyugoku: "../images/top/region-b-img-6.png",
-    kyusyu: "../images/top/region-b-img-7.png",
+    hokkaido: "./images/top/region-b-img.png",
+    tohoku: "./images/top/region-b-img-2.png",
+    kanto: "./images/top/region-b-img-3.png",
+    tokai: "./images/top/region-b-img-4.png",
+    kinki: "./images/top/region-b-img-5.png",
+    tyugoku: "./images/top/region-b-img-6.png",
+    kyusyu: "./images/top/region-b-img-7.png",
   };
   $(".region")
     .hover(
